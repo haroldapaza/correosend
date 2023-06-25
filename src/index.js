@@ -3,18 +3,20 @@ const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
 const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
 app.get('/', async (req, res) => {
 
     res.json({ "estado": 1, "mensaje": "Correo Enviado, su dispositivo ha sido registrado exitosamente." });
 });
 app.post('/senmailintidev', (req, res) => {
 
-    const nombre = req.body.nombre_intidev;
-    const email = req.body.email_intidev;
-    const asunto = req.body.asunto_intidev;
-    const telefono = req.body.telefono_intidev;
-    const mensaje = req.body.mensaje_intidev;
+    var nombre = req.body.nombre_intidev;
+    var email = req.body.email_intidev;
+    var asunto = req.body.asunto_intidev;
+    var telefono = req.body.telefono_intidev;
+    var mensaje = req.body.mensaje_intidev;
     var listaError = [];
+
     if ((nombre === null || nombre.trim() === '')) {
         listaError.push('nombre');
     }
