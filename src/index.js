@@ -43,7 +43,7 @@ app.post('/senmailintidev', (req, res) => {
     var message = {
         from: "intidev.des@gmail.com",
         to: "intidev.info@gmail.com",
-        subject: "Ejemplo de asunto de correo",
+        subject: `${asunto}- ${nombre}`,
         text: "Plaintext version of the message",
         html: `<h1 style="color: #5e9ca0;">El trabajo nos llama!</h1><h2>El cliente <span style="color: #008080;"><strong>${nombre}</strong></span> con el correo <span style="color: #008080;"><strong>${email}</strong></span> a solicitado informaci&oacute;n con los siguientes datos:</h2><table style="border-collapse: collapse; width: 100%; height: 54px;" border="1"><tbody><tr style="height: 18px;"><td style="width: 17.1875%; height: 18px;"><strong>Asunto&nbsp;</strong></td><td style="width: 82.8125%; height: 18px;">${asunto}</td></tr><tr style="height: 18px;"><td style="width: 17.1875%; height: 18px;"><strong>Mensaje</strong></td><td style="width: 82.8125%; height: 18px;">${mensaje}</td></tr><tr style="height: 18px;"><td style="width: 17.1875%; height: 18px;"><strong>Telefono</strong></td><td style="width: 82.8125%; height: 18px;">${telefono}</td></tr></tbody></table><p>&nbsp;</p><p><strong>&nbsp;</strong></p>`
     };
