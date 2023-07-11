@@ -10,11 +10,11 @@ app.get('/', async (req, res) => {
 });
 app.post('/senmailintidev', (req, res) => {
 
-    var nombre = req.body.nombre_intidev;
-    var email = req.body.email_intidev;
-    var asunto = req.body.asunto_intidev;
-    var telefono = req.body.telefono_intidev;
-    var mensaje = req.body.mensaje_intidev;
+    var nombre = req.body.nombreintidev;
+    var email = req.body.emailintidev;
+    var asunto = req.body.asuntointidev;
+    var telefono = req.body.telefonointidev;
+    var mensaje = req.body.mensajeintidev;
     var listaError = [];
 
     if ((nombre === null || nombre.trim() === '')) {
